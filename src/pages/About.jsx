@@ -136,58 +136,68 @@ export default function About() {
       {/* =========================================================================
           OUR TEAM
          ========================================================================= */}
-      <section className="py-10 bg-slate-50/80 border-y border-slate-200">
+      <section className="py-12 bg-slate-50/80 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            badge="Leadership"
-            title="Our Team"
-            // highlightText="Team"
+            badge="Our Team"
+            title="Meet the Team Behind FTPL"
             description={teamIntroduction}
           />
 
-          <div className="max-w-2xl mx-auto">
-            {teamMembers.map((member) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-soft flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left"
+                transition={{ duration: 0.35, delay: index * 0.06 }}
+                className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200/90 shadow-soft hover:shadow-md hover:border-brandBlue/30 transition-all duration-300 flex flex-col items-center text-center group"
               >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  loading="lazy"
-                  className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover ring-4 ring-brandBlue/20 shrink-0"
-                />
-                <div className="space-y-3">
-                  <div>
-                    <h3 className="text-2xl font-bold font-heading text-slate-900">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm font-semibold text-brandBlue mt-0.5">
-                      {member.role}
-                    </p>
-                    <p className="text-xs text-slate-500 font-medium mt-0.5">
-                      {member.credentials}
-                    </p>
-                  </div>
+                <div className="relative mb-5 shrink-0">
+                  <img
+                    src={member.avatar || member.image}
+                    alt={member.name}
+                    loading="lazy"
+                    className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover ring-4 ring-slate-100 group-hover:ring-brandBlue/20 transition-all duration-300 shadow-xs"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80";
+                    }}
+                  />
+                </div>
 
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                    {member.bio}
+                <div className="w-full flex-1 flex flex-col items-center">
+                  <h3 className="text-xl font-bold font-heading text-slate-900 group-hover:text-brandBlue transition-colors">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm font-semibold text-brandBlue mt-1">
+                    {member.role}
                   </p>
 
-                  <div className="pt-2">
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-blue-50 text-brandBlue hover:bg-brandBlue hover:text-white transition-colors border border-brandBlue/20"
-                    >
-                      <Linkedin className="w-3.5 h-3.5" />
-                      <span>LinkedIn Profile</span>
-                    </a>
-                  </div>
+                  {member.credentials && (
+                    <p className="text-xs text-slate-500 font-medium mt-1">
+                      {member.credentials}
+                    </p>
+                  )}
+
+                  <p className="text-sm text-slate-600 leading-relaxed mt-3 flex-1">
+                    {member.description || member.bio}
+                  </p>
+
+                  {member.linkedin && (
+                    <div className="pt-4 mt-auto">
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-blue-50 text-brandBlue hover:bg-brandBlue hover:text-white transition-colors border border-brandBlue/20"
+                      >
+                        <Linkedin className="w-3.5 h-3.5" />
+                        <span>LinkedIn Profile</span>
+                      </a>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}

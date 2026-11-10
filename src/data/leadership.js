@@ -1,13 +1,14 @@
 export const leadership = [
   {
     name: "Srikanta Biswal",
-    role: "Co-Founder & Director",
+    role: "Co-Founder & CEO",
     credentials: "M.Tech, Indian Institute of Technology (IIT) Bhubaneswar",
-    bio: "An alumnus of IIT Bhubaneswar with a deep passion for grassroots systems architecture and data-driven ecosystems. Srikanta spearheads FTPL's product roadmap, core engineering, and strategic partnerships across academia and industry in Eastern India.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&h=400&q=80",
+    bio: "Driving the company's vision and strategy, leading growth initiatives, and fostering innovation in the career solutions space. An alumnus of IIT Bhubaneswar with published research in machine learning.",
+    image: "https://jsjcard-business.s3.ap-south-1.amazonaws.com/documents/hr/undefined/_17647639930050.4582606368699561srikanta.jpg",
+    avatar: "https://jsjcard-business.s3.ap-south-1.amazonaws.com/documents/hr/undefined/_17647639930050.4582606368699561srikanta.jpg",
     linkedin: "https://www.linkedin.com/in/srikanta-biswal-ftpl",
     quote: "Building technology for Bharat means solving the last-mile disconnect between local commerce and aspiring youth.",
-    tags: ["Product Strategy", "System Architecture", "IIT BBS Alum"]
+    tags: ["Vision & Strategy", "Machine Learning", "IIT BBS Alum"]
   },
   {
     name: "Ashwani Kumar Pandey",
