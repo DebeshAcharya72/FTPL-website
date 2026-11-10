@@ -5,11 +5,10 @@ import MainLayout from './layouts/MainLayout';
 // Lazy load pages for optimal bundle splitting and performance
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
-const JSJCard = lazy(() => import('./pages/JSJCard'));
-const Solutions = lazy(() => import('./pages/Solutions'));
 const Services = lazy(() => import('./pages/Services'));
-const Careers = lazy(() => import('./pages/Careers'));
+const Brands = lazy(() => import('./pages/Brands'));
 const Contact = lazy(() => import('./pages/Contact'));
+const JSJCard = lazy(() => import('./pages/JSJCard'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -27,7 +26,7 @@ function PageLoader() {
         </div>
       </div>
       <p className="mt-4 text-xs font-semibold tracking-wider uppercase text-slate-500 dark:text-slate-400 animate-pulse">
-        Loading Ecosystem...
+        Loading Flasho Tech...
       </p>
     </div>
   );
@@ -54,22 +53,6 @@ export default function App() {
           }
         />
         <Route
-          path="jsj-card"
-          element={
-            <Suspense fallback={<PageLoader />}>
-              <JSJCard />
-            </Suspense>
-          }
-        />
-        <Route
-          path="solutions"
-          element={
-            <Suspense fallback={<PageLoader />}>
-              <Solutions />
-            </Suspense>
-          }
-        />
-        <Route
           path="services"
           element={
             <Suspense fallback={<PageLoader />}>
@@ -78,10 +61,10 @@ export default function App() {
           }
         />
         <Route
-          path="careers"
+          path="brands"
           element={
             <Suspense fallback={<PageLoader />}>
-              <Careers />
+              <Brands />
             </Suspense>
           }
         />
@@ -90,6 +73,14 @@ export default function App() {
           element={
             <Suspense fallback={<PageLoader />}>
               <Contact />
+            </Suspense>
+          }
+        />
+        <Route
+          path="jsj-card"
+          element={
+            <Suspense fallback={<PageLoader />}>
+              <JSJCard />
             </Suspense>
           }
         />

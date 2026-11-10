@@ -8,10 +8,8 @@ export default function SEO({
   ogType = "website",
   ogImage = "/favicon.svg",
 }) {
-  const fullTitle = title
-    ? `${title} | ${companyInfo.shortName} - Flasho Tech Private Limited`
-    : `${companyInfo.shortName} - ${companyInfo.tagline}`;
-
+  // If title is explicitly passed, use it directly (or format cleanly)
+  const fullTitle = title || companyInfo.name;
   const currentUrl = typeof window !== 'undefined' ? window.location.href : companyInfo.website;
 
   return (
@@ -20,7 +18,7 @@ export default function SEO({
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
-      <meta name="keywords" content="FTPL, Flasho Tech Private Limited, JSJ Card, Bhubaneswar startup, Odisha tech, universal student card, smart business solutions, ITI placement, career management, mega job fair Odisha" />
+      <meta name="keywords" content="Flasho Tech, Flasho Tech Private Limited, FTPL, FTCS, BootUp360, JSJ Card, BYER, Bhubaneswar, Odisha, business consulting, technology consulting, industrial monitoring, predictive maintenance, practical training, digital identity" />
       <meta name="author" content="Flasho Tech Private Limited" />
       <meta name="robots" content="index, follow" />
 

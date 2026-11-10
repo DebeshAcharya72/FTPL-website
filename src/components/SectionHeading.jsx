@@ -12,22 +12,22 @@ export default function SectionHeading({
   const isCenter = align === 'center';
 
   const badgeStyles = {
-    accent: "bg-accent/10 text-accent dark:bg-accent/20 dark:text-accent-300 border-accent/20",
-    highlight: "bg-highlight/10 text-highlight-700 dark:bg-highlight/20 dark:text-highlight-300 border-highlight/30",
-    primary: "bg-primary-100 text-primary-800 dark:bg-primary-900/60 dark:text-primary-200 border-primary-200 dark:border-primary-700"
+    accent: "bg-brandBlue/10 text-brandBlue border-brandBlue/20",
+    highlight: "bg-brandRed/10 text-brandRed border-brandRed/25",
+    primary: "bg-primary-100 text-primary-800 border-primary-200"
   };
 
   return (
-    <div className={`mb-12 md:mb-16 ${isCenter ? 'text-center mx-auto max-w-3xl' : 'text-left max-w-2xl'} ${className}`}>
+    <div className={`mb-8 sm:mb-12 md:mb-16 ${isCenter ? 'text-center mx-auto max-w-3xl' : 'text-left max-w-2xl'} px-1 sm:px-0 ${className}`}>
       {badge && (
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="inline-block mb-3"
+          className="inline-block mb-2.5 sm:mb-3"
         >
-          <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider border ${badgeStyles[badgeColor] || badgeStyles.accent}`}>
+          <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold uppercase tracking-wider border ${badgeStyles[badgeColor] || badgeStyles.accent}`}>
             <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
             {badge}
           </span>
@@ -39,11 +39,11 @@ export default function SectionHeading({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-primary-950 dark:text-white"
+        className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-slate-900"
       >
         {title}{" "}
         {highlightText && (
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-blue-500 to-highlight">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue via-blue-600 to-brandRed">
             {highlightText}
           </span>
         )}
@@ -55,7 +55,7 @@ export default function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal"
+          className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed font-normal"
         >
           {description}
         </motion.p>

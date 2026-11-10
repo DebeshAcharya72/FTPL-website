@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Button({
   children,
-  variant = 'primary',
+  variant = 'accent',
   size = 'md',
   to,
   href,
@@ -24,11 +24,11 @@ export default function Button({
   };
 
   const variantStyles = {
-    primary: "bg-primary text-white hover:bg-primary-700 focus:ring-primary-500 shadow-primary/20 hover:shadow-primary/30",
-    accent: "bg-accent text-white hover:bg-accent-hover focus:ring-accent-500 shadow-accent/25 hover:shadow-accent/40 hover:shadow-lg",
-    highlight: "bg-highlight text-primary-950 font-bold hover:bg-highlight-600 focus:ring-highlight shadow-highlight/25 hover:shadow-highlight/40 hover:shadow-lg",
-    outline: "border-2 border-slate-300 dark:border-slate-700 bg-transparent text-slate-800 dark:text-slate-100 hover:border-accent hover:text-accent dark:hover:border-accent dark:hover:text-accent focus:ring-accent",
-    ghost: "bg-transparent text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-dark-elevated hover:text-primary-900 dark:hover:text-white focus:ring-accent",
+    primary: "bg-primary-900 text-white hover:bg-primary-800 focus:ring-primary-500 shadow-primary/20",
+    accent: "bg-brandBlue text-white hover:bg-brandBlue-600 focus:ring-brandBlue shadow-brandBlue/25 hover:shadow-glow-blue",
+    highlight: "bg-brandRed text-white hover:bg-brandRed-600 focus:ring-brandRed shadow-brandRed/25 hover:shadow-glow-red",
+    outline: "border-2 border-slate-300 dark:border-slate-700 bg-transparent text-slate-800 dark:text-slate-100 hover:border-brandBlue hover:text-brandBlue dark:hover:border-blue-400 dark:hover:text-blue-400 focus:ring-brandBlue",
+    ghost: "bg-transparent text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-dark-elevated hover:text-primary-900 dark:hover:text-white focus:ring-brandBlue",
     white: "bg-white text-primary-900 hover:bg-slate-100 focus:ring-white shadow-lg",
   };
 
