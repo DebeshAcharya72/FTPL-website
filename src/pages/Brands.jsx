@@ -100,9 +100,9 @@ export default function Brands() {
                       <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-brandBlue block">
                         {brand.category}
                       </span>
-                      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-heading text-slate-900">
+                      {/* <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-heading text-slate-900">
                         {brand.name}
-                      </h2>
+                      </h2> */}
                     </div>
                   </div>
 
@@ -179,7 +179,9 @@ export default function Brands() {
                         <h3 className="font-heading font-extrabold text-lg sm:text-xl text-slate-900">
                           {brand.shortName}
                         </h3>
-                        <p className="text-xs text-slate-500 mt-0.5">{brand.tagline}</p>
+                        <p className="text-xs text-slate-500 mt-0.5">
+                          {brand.tagline}
+                        </p>
                       </div>
                       <a
                         href={brand.externalUrl}
