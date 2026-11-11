@@ -301,12 +301,17 @@ export default function Home() {
                 className="group p-7 rounded-3xl bg-white border border-slate-200 shadow-soft hover:shadow-soft-xl hover:border-brandBlue/40 transition-all flex flex-col justify-between"
               >
                 <div>
-                  {/* Brand Header & Icon */}
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-slate-50 text-brandBlue flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Icon className="w-6 h-6" />
+                  {/* Brand Header & Official Logo */}
+                  <div className="flex items-center justify-between mb-5 gap-3">
+                    <div className="h-14 w-32 px-3 py-1.5 rounded-2xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-center group-hover:border-brandBlue/40 group-hover:shadow-sm transition-all shrink-0">
+                      <img
+                        src={brand.logo}
+                        alt={`${brand.name} official logo`}
+                        className="max-h-full max-w-full object-contain"
+                        loading="lazy"
+                      />
                     </div>
-                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600">
+                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 shrink-0 text-right">
                       {brand.category}
                     </span>
                   </div>

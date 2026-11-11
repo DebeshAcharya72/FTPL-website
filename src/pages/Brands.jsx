@@ -87,9 +87,14 @@ export default function Brands() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
                 {/* Brand Information */}
                 <div className="lg:col-span-8 space-y-3 sm:space-y-4">
-                  <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-brandBlue/10 text-brandBlue flex items-center justify-center shrink-0">
-                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                    <div className="h-12 sm:h-14 w-auto min-w-[90px] max-w-[160px] px-3 py-1.5 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-xs flex items-center justify-center shrink-0">
+                      <img
+                        src={brand.logo}
+                        alt={`${brand.name} official logo`}
+                        className="max-h-full max-w-full object-contain"
+                        loading="lazy"
+                      />
                     </div>
                     <div>
                       <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-brandBlue block">
@@ -139,18 +144,43 @@ export default function Brands() {
                 {/* Brand Showcase Visual Card */}
                 <div className="lg:col-span-4 flex items-center justify-center pt-2 lg:pt-0">
                   {brand.id === "jsj-card" ? (
-                    <div className="w-full max-w-sm">
+                    <div className="w-full max-w-sm space-y-3">
+                      <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center gap-3 shadow-xs">
+                        <div className="w-14 h-14 p-1.5 rounded-xl bg-white border border-slate-200 shadow-xs flex items-center justify-center shrink-0">
+                          <img
+                            src={brand.logo}
+                            alt="JSJ Official Logo"
+                            className="w-full h-full object-contain"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div className="text-left">
+                          <span className="text-xs font-bold text-slate-900 block font-heading">
+                            Universal Purpose Pass
+                          </span>
+                          <span className="text-[11px] text-brandRed font-semibold block">
+                            Driven by Purpose
+                          </span>
+                        </div>
+                      </div>
                       <JSJCardVisual interactive={true} canFlip={true} />
                     </div>
                   ) : (
-                    <div className="w-full p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-3">
-                      <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-xl sm:rounded-2xl bg-white shadow-xs border border-slate-200 flex items-center justify-center text-brandBlue">
-                        <Icon className="w-7 h-7 sm:w-8 sm:h-8" />
+                    <div className="w-full p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-3.5 flex flex-col items-center">
+                      <div className="w-full h-20 sm:h-24 px-4 py-2 rounded-xl sm:rounded-2xl bg-white shadow-xs border border-slate-200/90 flex items-center justify-center">
+                        <img
+                          src={brand.logo}
+                          alt={`${brand.name} official logo`}
+                          className="max-h-full max-w-full object-contain"
+                          loading="lazy"
+                        />
                       </div>
-                      <h3 className="font-heading font-extrabold text-lg sm:text-xl text-slate-900">
-                        {brand.shortName}
-                      </h3>
-                      <p className="text-xs text-slate-500">{brand.tagline}</p>
+                      <div>
+                        <h3 className="font-heading font-extrabold text-lg sm:text-xl text-slate-900">
+                          {brand.shortName}
+                        </h3>
+                        <p className="text-xs text-slate-500 mt-0.5">{brand.tagline}</p>
+                      </div>
                       <a
                         href={brand.externalUrl}
                         target="_blank"

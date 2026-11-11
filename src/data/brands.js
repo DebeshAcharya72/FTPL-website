@@ -1,3 +1,10 @@
+import ftcsLogo from '../assets/brands/Ftcs.png';
+import bootup360Logo from '../assets/brands/BootUp360_tm.png';
+import jsjLogo from '../assets/brands/jsj_logo.png';
+import byerLogo from '../assets/brands/byer.png';
+
+export { ftcsLogo, bootup360Logo, jsjLogo, byerLogo };
+
 export const brandsData = [
   {
     id: "ftcs",
@@ -8,6 +15,7 @@ export const brandsData = [
     homeSummary: "Our consulting wing provides business and technology services for startups and small and medium enterprises.",
     description: "FTCS works with startups and SMEs on business growth planning, market research, digital marketing, marketplace listing support, website and software development, and AI solutions. It also works on predictive maintenance and machine failure detection for manufacturing operations.",
     externalUrl: "https://www.ftcs.in/",
+    logo: ftcsLogo,
     primaryCta: {
       label: "Visit FTCS",
       href: "https://www.ftcs.in/",
@@ -17,7 +25,7 @@ export const brandsData = [
       label: "View Consulting Services",
       to: "/services"
     },
-    accentColor: "accent",
+    accentColor: "brandBlue",
     icon: "Briefcase"
   },
   {
@@ -29,6 +37,7 @@ export const brandsData = [
     homeSummary: "Practical training and workshops for students, professionals, and teams.",
     description: "BootUp360 delivers training and workshops that help students, professionals, and teams develop skills they can use in the workplace. Institutions can get in touch to discuss workshops and training needs.",
     externalUrl: "https://www.bootup360.com/",
+    logo: bootup360Logo,
     primaryCta: {
       label: "Visit BootUp360",
       href: "https://www.bootup360.com/",
@@ -38,7 +47,7 @@ export const brandsData = [
       label: "Enquire About Training",
       to: "/contact?interest=training"
     },
-    accentColor: "highlight",
+    accentColor: "brandRed",
     icon: "GraduationCap"
   },
   {
@@ -50,6 +59,7 @@ export const brandsData = [
     homeSummary: "A digital identity card for businesses and individuals to share their profiles and contact details.",
     description: "JSJ Card lets businesses and individuals share their profile and contact details through a digital identity card. Use it when introducing your business, meeting customers, or exchanging professional details.",
     externalUrl: "https://www.jsjcard.com/",
+    logo: jsjLogo,
     primaryCta: {
       label: "Visit JSJ Card",
       href: "https://www.jsjcard.com/",
@@ -59,7 +69,7 @@ export const brandsData = [
       label: "Ask About JSJ Card",
       to: "/contact?interest=jsj"
     },
-    accentColor: "primary",
+    accentColor: "brandBlue",
     icon: "CreditCard"
   },
   {
@@ -71,6 +81,7 @@ export const brandsData = [
     homeSummary: "A B2B distribution platform connecting suppliers with foodservice operators, retailers, and emerging businesses.",
     description: "BYER connects brands, manufacturers, and suppliers with restaurants, cloud kitchens, caterers, retailers, and emerging businesses through one integrated B2B distribution network.",
     externalUrl: "https://byer.in/",
+    logo: byerLogo,
     primaryCta: {
       label: "Visit BYER",
       href: "https://byer.in/",
